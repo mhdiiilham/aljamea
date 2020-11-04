@@ -14,11 +14,11 @@ func newJamaah() []*user {
 	return []*user{
 		&user{
 			Name:  "Ardi Gunawan",
-			Email: "muhammad.ilham@klikacc.com",
+			Email: "",
 		},
 		&user{
 			Name:  "Andjaradji Rooseno",
-			Email: "muhammad.ilham@klikacc.com",
+			Email: "",
 		},
 		&user{
 			Name:  "Muhammad Ilham",
@@ -26,21 +26,21 @@ func newJamaah() []*user {
 		},
 		&user{
 			Name:  "Meigara Juma",
-			Email: "muhammad.ilham@klikacc.com",
+			Email: "",
 		},
 		&user{
 			Name:  "Kalys Khairy Lasoma",
-			Email: "muhammad.ilham@klikacc.com",
+			Email: "",
 		},
 	}
 }
 
 func randomIndex(max int) []int {
 	candidate := []int{}
-	for len(candidate) < 3 {
+	for len(candidate) < max {
 		isUnique := true
-		randomIndex := rand.Intn(max)
 		rand.Seed(time.Now().UnixNano())
+		randomIndex := rand.Intn(max)
 
 		for _, value := range candidate {
 			if randomIndex == value {
