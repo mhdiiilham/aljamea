@@ -9,6 +9,7 @@ import (
 )
 
 func sendMail(email string, imams []string) {
+
 	body := "<strong> Alhamdulillah Sudara Kita Yang Beruntung Jadi Imam </strong> \n"
 
 	for i, user := range imams {
